@@ -46,5 +46,8 @@
       "<rootDir>/node_modules/",
       "<rootDir>/.git/"
     ]
+  },
+  "resolutions": {
+    "**/**/node-gyp": "5.0.0"
   }
 }
