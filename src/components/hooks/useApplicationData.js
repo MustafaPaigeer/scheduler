@@ -36,7 +36,7 @@ export default function useApplicationData() {
       let count = appointmentsForDay.length;
 
       // count how many appointments there are per day then subtract each day accordingly
-      appointmentsForDay.forEach((appointment) => {6
+      appointmentsForDay.forEach((appointment) => {
         if (appointment.interview) {
           count--;
         }
