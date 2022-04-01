@@ -8,6 +8,6 @@ Install dependencies with `npm install`.
 
 ## Screen Shots
 
-!["Appointments page"]('https://github.com/MustafaPaigeer/scheduler/blob/master/docs/scheduler-1.png')
+!["Appointments page"](https://github.com/MustafaPaigeer/scheduler/blob/master/docs/scheduler-1.png)
 
 !["Booking an Appointment"](https://github.com/MustafaPaigeer/scheduler/blob/master/docs/scheduler-2.png)
