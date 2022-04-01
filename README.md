@@ -1,5 +1,7 @@
 # Interview Scheduler
 
+Scheduler is a web application to help with booking interview appointments.
+
 ## Setup
 
 Install dependencies with `npm install`.
@@ -8,16 +10,4 @@ Install dependencies with `npm install`.
 
 ```sh
 npm start
-```
-
-## Running Jest Test Framework
-
-```sh
-npm test
-```
-
-## Running Storybook Visual Testbed
-
-```sh
-npm run storybook
 ```
