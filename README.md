@@ -1,13 +1,13 @@
 # Interview Scheduler
 
-Scheduler is a web application to help with booking interview appointments.
+Scheduler is a single page web application for booking interview appointments.
 
 ## Setup
 
 Install dependencies with `npm install`.
 
-## Running Webpack Development Server
+## Screen Shots
 
-```sh
-npm start
-```
+!["Appointments page"]('https://github.com/MustafaPaigeer/scheduler/blob/master/docs/scheduler-1.png')
+
+!["Booking an Appointment"](https://github.com/MustafaPaigeer/scheduler/blob/master/docs/scheduler-2.png)
