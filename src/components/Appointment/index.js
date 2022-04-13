@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import "./styles.scss";
 import Header from "./Header";
 import Show from "./Show";
@@ -23,8 +23,17 @@ export default function Appointment(props) {
   /* props: id, time, interview, interviewers, bookInterview, cancelInterview */
 
   const { mode, transition, back } = useVisualMode(
-    props.interview ? SHOW : EMPTY
+    props.interview ? SHOW : EMPTY,
+    props.id
   );
+  useEffect(() => {
+    if (props.interview && mode === EMPTY) {
+      transition(SHOW);
+    }
+    if (props.interview === null && mode === SHOW) {
+      transition(EMPTY);
+    }
+  }, [props.interview, transition, mode]);
 
   // save function for form
   const save = (name, interviewer) => {
@@ -33,6 +42,7 @@ export default function Appointment(props) {
       student: name,
       interviewer
     }
+    transition(SAVING);
     props.bookInterview(props.id, interview)
       .then(res => transition(SHOW))
       .catch(err => transition(ERROR_SAVE, true));
@@ -49,17 +59,19 @@ export default function Appointment(props) {
   return (
     <article className="appointment" data-testid="appointment">
       <Header time={props.time} />
-      {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
+      {mode === EMPTY && !props.interview && (<Empty onAdd={() => transition(CREATE)} />)}
       {mode === SHOW && props.interview && (
         <Show
         student={props.interview.student}
-        interviewer={props.interview.interviewer && props.interview.interviewer.name} 
+        interviewer={props.interview.interviewer} 
         onEdit={() => transition(EDIT)} 
         onDelete={() => transition(CONFIRM)} />
       )}
       {mode === CREATE && (
         <Form
+          name={props.student}
           interviewers={props.interviewers}
+          interviewer={props.interviewer}
           onCancel={back}
           onSave={save}
         />
@@ -72,15 +84,16 @@ export default function Appointment(props) {
       )}
       {mode === CONFIRM && (
         <Confirm
+          message="Are you sure you would like to delete"
           onConfirm={destroy}
           onCancel={back}
         />
       )}
      {mode === EDIT && (
      <Form 
-       name={props.interview.student} 
+       name={props.interview ? props.interview.student : props.student} 
        interviewers={props.interviewers} 
-       interviewer={props.interview.interviewer ? props.interview.interviewer.id : null} 
+       interviewer={props.interview ? props.interview.interviewer.id : props.interviewer} 
        onSave={save} 
        onCancel={back}
        />

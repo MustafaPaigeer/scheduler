@@ -146,7 +146,7 @@ storiesOf("Appointment", module)
   .addParameters({
     backgrounds: [{ name: "white", value: "#fff", default: true }]
   })
-  .add("Appointment", () => <Appointment />)
+  
   .add("Appointment with Time", () => <Appointment time="12pm" />)
   .add("Header", () => <Header time="12pm" />)
   .add("Empty", () => <Empty onAdd={action("onAdd")} />)
@@ -171,7 +171,7 @@ storiesOf("Appointment", module)
 
    .add("Create", () => 
    <Form
-   interviewer={4}
+   interviewers={interviewers}
    onSave={action("onSave")}
    onCancel={action("onCancel")} />)
 
@@ -198,6 +198,6 @@ storiesOf("Appointment", module)
         time="4pm"
         interview={{ student: "Lydia Miller-Jones", interviewer }}
       />
-      <Appointment time="5pm" />
+      <Appointment id="last" time="5pm" />
     </Fragment>
   ));
