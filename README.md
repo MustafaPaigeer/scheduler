@@ -26,9 +26,9 @@ Install dependencies with `npm install`.
 
 ## Setup Interview Scheduler API
 
-[Setup Interview Scheduler API ] (https://github.com/MustafaPaigeer/scheduler-api "Scheduler API")
+Setup Interview Scheduler API  <https://github.com/MustafaPaigeer/scheduler-api>
 
-Please run the API first
+__Please make sure to run the API first__
 
 ## Run Webpack Development Server
 
