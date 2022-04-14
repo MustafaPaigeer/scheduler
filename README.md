@@ -44,8 +44,8 @@ npm run storybook
 
 ## App Screen Shots
 
-!["Appointments page"](https://github.com/MustafaPaigeer/scheduler/blob/master/docs/scheduler-1.png)
+!["Appointments page"](https://github.com/MustafaPaigeer/scheduler/blob/master/docs/Scheduler1.png)
 
-!["Booking an Appointment"](https://github.com/MustafaPaigeer/scheduler/blob/master/docs/scheduler2.png)
+!["Booking an Appointment"](https://github.com/MustafaPaigeer/scheduler/blob/master/docs/Scheduler2.png)
 
-!["Removing an Appointment"](https://github.com/MustafaPaigeer/scheduler/blob/master/docs/scheduler3.png)
+!["Removing an Appointment"](https://github.com/MustafaPaigeer/scheduler/blob/master/docs/Scheduler3.png)
